@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #2e2e2e;
+    color: white;
+    overflow: hidden;
+}
+
+.timer {
+    margin: 15px 0 50px 20px;
+}
+
+.timer a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.timer-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.date-area, .time-area {
+    margin: 25px 0;
+}
+
+.date-area {
+    font-size: 40px;
+}
+
+.time-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 20vw;
+}
+
+.time-area-one, .time-area-two {
+    width: 23vw;
+    height: 20vw;
+    background-color: #525252;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13vw;
+    color: white;
+    border-radius: 20px;
+    margin: 0 30px;
+}
+
+.time-area-p {
+    font-size: 13vw;
+}
+
+.click-button-class {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.click-button {
+    width: 5vw;
+    height: 2vw;
+    border-radius: 10px;
+    color: white;
+    background-color: #525255;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#palette-icon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.color-buttons {
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+    position: absolute;
+    bottom: 5rem;
+    left: 20px;
+}
+
+.color-buttons.active {
+    max-height: 15rem;
+}
+
+.color-button {
+    width: 5rem;
+    height: 2rem;
+    margin: 5px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.color-buttons.active .color-button {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.color-button:hover {
+    transform: scale(1.1);
+}
+
+.color-button-1:hover { background-color: #2e2e2e; color: white; }
+.color-button-2:hover { background-color: white; color: #2e2e2e; }
+.color-button-3:hover { background-color: #2e2e2e; color: yellow; }
+.color-button-4:hover { background-color: #2e2e2e; color: gray; }
+.color-button-5:hover { background-color: #2e2e2e; color: green; }
+
+.time-area-zero {
+    position: relative;
+    top: 8vw;
+    left: 4vw;
+}
+
+.palette {
+    margin-left: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* 모바일 전용 스타일 */
+@media (max-width: 600px) {
+    .timer {
+        margin: 10px 0 20px 10px;
+    }
+
+    .timer-div {
+        height: auto;
+        padding: 10px;
+    }
+
+    #timer-h1 {
+        font-size: 30px;
+        margin-bottom: 150px;
+    }
+
+    .date-area {
+        font-size: 25px;
+    }
+
+    .time-area {
+        width: 90vw;
+        height: auto;
+    }
+
+    .time-area-one, .time-area-two {
+        width: 35vw;
+        height: 35vw;
+        font-size: 18vw;
+        margin: 0 10px;
+    }
+
+    .time-area-p {
+        font-size: 14vw;
+    }
+
+    .click-button-class {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .click-button {
+        width: 10vw; /* 모바일에서 너비 조정 */
+        height: 4vw; /* 모바일에서 높이 조정 */
+    }
+
+    #palette-icon {
+        font-size: 1.5rem; /* 모바일에서 아이콘 크기 조정 */
+    }
+
+    .color-buttons {
+        bottom: 7rem; /* 모바일에서 아래 위치 조정 */
+        left: 10px; /* 모바일에서 왼쪽 위치 조정 */
+    }
+
+    .color-buttons.active {
+        max-height: 20rem; /* 모바일에서 최대 높이 조정 */
+    }
+
+    .color-button {
+        width: 6rem; /* 모바일에서 버튼 너비 조정 */
+        height: 2.5rem; /* 모바일에서 버튼 높이 조정 */
+    }
+
+    .time-area-zero {
+        top: 8vw; /* 모바일에서 위치 조정 */
+        left: 10vw; /* 모바일에서 위치 조정 */
+    }
+
+    .palette {
+        margin-left: 10px; /* 모바일에서 여백 조정 */
+    }
+}

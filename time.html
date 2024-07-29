@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOCK</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="favicon (1).ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="container">
+        <div class="timer">
+            <a href="#"><h1 id="timer-h1">CLOCK</h1></a>
+            <div class="timer-div">
+                <div class="date-area" id="date-area"><p>2024년 12월 24일 금</p></div>
+                <div class="time-area">
+                    <div class="time-area-zero" id="time-area-ampm">am</div>
+                    <div class="time-area-one" id="time-area-hour">12</div>
+                    <div class="time-area-p">:</div>
+                    <div class="time-area-two" id="time-area-minutes">24</div>
+                </div>
+            </div>
+        </div>
+        <div class="click-button-class">
+            <button class="click-button" id="open-button">전체화면</button>
+            <button class="click-button" id="close-button">닫기</button>
+        </div>
+
+        <div class="color-palette">
+            <span id="palette-icon" class="palette"><i class='bx bx-palette'></i></span>
+            <div class="color-buttons" id="color-buttons">
+                <button class="color-button color-button-1">검 - 흰</button>
+                <button class="color-button color-button-2">흰 - 검</button>
+                <button class="color-button color-button-3">검 - 노</button>
+                <button class="color-button color-button-4">검 - 회</button>
+                <button class="color-button color-button-5">검 - 초</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
